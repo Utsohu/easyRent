@@ -1,0 +1,301 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <!-- Required meta tags always come first -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+	<title>EasyRent.B.Y.</title>
+    <!--Bootstrap-->
+	<link rel="stylesheet" type="text/css" href="static/out/bootstrap/bootstrap.min.css" media="all" /> 
+    <!--Bootstrap-select CSS-->
+	<link rel="stylesheet" type="text/css" href="static/out/bootstrap-select/bootstrap-select.min.css" media="all" />
+	<!-- jquery-ui css -->
+    <link rel="stylesheet" type="text/css" href="static/out/jquery/jquery-ui.min.css" media="all" /> 
+    <!--Linearicons Icons CSS-->
+    <link rel="stylesheet" href="static/out/linearicons/Linearicons.css">
+    <!--Spin CSS-->
+	<link rel="stylesheet" type="text/css" href="static/out/spin/spin.css" media="all" /> 
+
+	<link rel="stylesheet" type="text/css" href="static/css/common.css" media="all" /> 
+    <link rel="stylesheet" type="text/css" href="static/css/property_list.css" media="all" /> 
+
+<!--	<script type="text/javascript" src="static/libs/react/react.production.min.js"></script>
+    <script type="text/javascript" src="static/libs/react/react-dom.production.min.js"></script>-->
+	<script type="text/javascript" src="static/libs/react/react.development.js"></script>
+    <script type="text/javascript" src="static/libs/react/react-dom.development.js"></script>
+    <script type="text/javascript" src="static/libs/babel/babel.min.js"></script>
+
+</head>
+<body> 
+    <!-- Start Header Nav-->
+    <nav class="navbar navbar-default nav_custom row">
+        <div class="container coustome-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand_logo" href="index.html"><img src="static/img/logo.png" alt="Logo"></a>
+            </div>
+
+            <div class="row collapse navbar-collapse" id="main_menu">
+                <ul class="nav navbar-right nav_buttom">
+                     <li><a id="login_or_exit" onclick="onLoginClick()">Login<i class="lnr lnr-arrow-right"></i></a></li>
+					 <li id="current_user_name"></li>
+				</ul>
+                <ul class="nav navbar-nav navbar-menu">
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="property_list.html">Property List</a></li>
+                    <li><a href="#" onclick = "PostInformation()">Post</a></li>
+                </ul>
+            </div>
+        </div> 
+    </nav>  
+    <!-- End Header Nav -->
+     <!-- Start Banner -->
+     <section class="banner-area row">
+         <h2>Property Listing</h2>
+         <div class="bottom-menu-area">
+             <a href="index.html">home</a>
+             <i class="lnr lnr-chevron-right"></i>
+             <a href="property_list.html">Property list</a>
+         </div>
+     </section>
+     <!-- End Banner -->
+     <div id="mainshow" style="position: absolute; left:50%; top:50%; transform:translate(-50%,-50%);width:100px;height:100px"></div>
+    
+    <!-- Start Content -->
+    <section class="heading-item-area">
+        <div class="container coustome-container">
+            <div class="row m0 heading-list">
+                <div class="leftsite-by">
+                    <h3><i class="lnr lnr-funnel"></i> Sorts by:</h3>
+                   <div class="feature_left_content">
+                       <select class="selectpicker">
+                          <option>Modify Time</option>
+                        </select> 
+                   </div>
+                </div>
+                <div class="center-site">
+                    <a href="#" class="active"><i class="fa fa-align-justify"></i></a>
+                    <a href="#"><i class="fa fa-th"></i></a>
+                </div>
+                <div class="right-site-bar pull-right">
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-custom" id="property_search_content" placeholder="&#xe86f; Search Here">
+                        </div>
+                        <li style="display: inline-block;"><a href="#" class="btn btn-submit" onclick="PropertySearch()">Search</a></li>
+                    </form>
+                </div>
+            </div>
+            <div class="row all-widgets-area m0">
+                <div class="col-md-3 col-sm-6 p0">
+                    <div class="widgets">
+                        <h5>Location</h5>
+                        <ul class="property_list">
+                            <li data-toggle="tab" id="Alberta" onclick="location_save(0)">Alberta</li>
+                            <li data-toggle="tab" id="British" onclick="location_save(1)">British Columbia</li>
+                            <li data-toggle="tab" id="Manitoba" onclick="location_save(2)">Manitoba</li>
+                            <li data-toggle="tab" id="New" onclick="location_save(3)">New Brunswick</li>
+                            <li data-toggle="tab" id="Newfoundland" onclick="location_save(4)">Newfoundland & Labrador</li>
+                            <li data-toggle="tab" id="Nova" onclick="location_save(5)">Nova Scotia</li>
+                            <li data-toggle="tab" id="Ontario" onclick="location_save(6)">Ontario</li>
+                            <li data-toggle="tab" id="Prince" onclick="location_save(7)">Prince Edward lsland</li>
+                            <li data-toggle="tab" id="Quebec" onclick="location_save(8)">Quebec</li>
+                            <li data-toggle="tab" id="Saskatchewan" onclick="location_save(9)">Saskatchewan</li>
+                            <li data-toggle="tab" id="All" onclick="location_save(-1)">All Region</li>
+                        </ul>
+                    </div>
+                    <div class="widgets appartnemt">
+                        <h5>Property Status</h5>
+                        <form role="form" class="radio_area">
+                            <ul class="radio_style">
+                                <li>
+                                    <input type="radio" id="rent-type-0" name="rent-type" value=0 onclick="PropertySearch()">
+                                    <label for="rent-type-0">Seek Rent</label>
+                                    <div class="check"></div>
+                                </li>
+                                <li>
+                                    <input type="radio" id="rent-type-1" name="rent-type" value=1 onclick="PropertySearch()">
+                                    <label for="rent-type-1">For Rent</label>
+                                    <div class="check"></div>
+                                </li> 
+                                <li>
+                                    <input type="radio" id="rent-type-2" name="rent-type" value=2 onclick="PropertySearch()">
+                                    <label for="rent-type-2">Sublet</label>
+                                    <div class="check"></div>
+                                </li> 
+                                <li>
+                                    <input type="radio" id="rent-type-3" name="rent-type" value=3 onclick="PropertySearch()">
+                                    <label for="rent-type-3">All Types</label>
+                                    <div class="check"></div>
+                                </li> 
+                            </ul>
+                        </form>   
+                    </div>
+                    <div class="widgets appartnemt">
+                        <h5>Appartnemt Type</h5>
+                        <form role="form" class="radio_area">
+                            <ul class="radio_style">
+                                <li>
+                                    <input type="radio" id="house-type-0" name="house-type" value=0 onclick="PropertySearch()">
+                                    <label for="house-type-0">DETACHED</label>
+                                    <div class="check"></div>
+                                </li>
+                                <li>
+                                    <input type="radio" id="house-type-1" name="house-type" value=1 onclick="PropertySearch()">
+                                    <label for="house-type-1">SEMI-DETACHED</label>
+                                    <div class="check"></div>
+                                    </li>
+                                <li>
+                                    <input type="radio" id="house-type-2" name="house-type" value=2 onclick="PropertySearch()">
+                                    <label for="house-type-2">TOWNHOUSE</label>
+                                    <div class="check"></div>
+                                </li>
+                                <li>
+                                    <input type="radio" id="house-type-3" name="house-type" value=3 onclick="PropertySearch()">
+                                    <label for="house-type-3">PROPERTY</label>
+                                    <div class="check"></div>
+                                </li>
+                                <li>
+                                    <input type="radio" id="house-type-4" name="house-type" value=4 onclick="PropertySearch()">
+                                    <label for="house-type-4">CONDOMINIUM</label>
+                                    <div class="check"></div>
+                                </li>
+                                <li>
+                                    <input type="radio" id="house-type-5" name="house-type" value=5 onclick="PropertySearch()">
+                                    <label for="house-type-5">ALL</label>
+                                    <div class="check"></div>
+                                </li>
+                            </ul>
+                        </form>    
+                    </div>
+                    <div class="widgets Price-Range">
+                        <h5>Price Range</h5>
+                        <ul class="list">
+                            <li>
+                                <div id="property_list_price_slide"></div>
+                                <input type="text" id="amount" readonly> 
+                            </li>
+                        </ul> 
+                    </div>
+                    <div class="widgets Flat-Filtering">
+                        <h5>Number of Rooms</h5>
+                        <div class="Bathrooms">
+                            <div class="Filtering">
+                                <select class="selectpicker" id="property_list_number_room">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>ALL</option>
+                                </select> 
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="widgets Size">
+                        <h5>Size</h5>
+                        <ul class="property_list">
+                            <li data-toggle="tab" id="size0" onclick="size_save('size<=500')">Bellow 500 sqf</li>
+                            <li data-toggle="tab" id="size1" onclick="size_save('size > 500 and size <= 1000')">500 - 1,000 sqf</li>
+                            <li data-toggle="tab" id="size2" onclick="size_save('size > 1000 and size <= 1500')">1,000 - 1,500 sqf</li>
+                            <li data-toggle="tab" id="size3" onclick="size_save('size > 1500 and size <= 2000')">1,500 - 2,000 sqf</li>
+                            <li data-toggle="tab" id="size4" onclick="size_save('size > 2500 and size <= 3000')">2,500 - 3,000 sqf</li>
+                            <li data-toggle="tab" id="size5" onclick="size_save('size > 3000 and size <= 3500')">3,000 - 3,500 sqf</li>
+                            <li data-toggle="tab" id="size6" onclick="size_save('size > 3500 and size <= 4000')">3,500 - 4,000 sqf</li>
+                            <li data-toggle="tab" id="size7" onclick="size_save('size > 4000')">Above 4,000 sqf</li>
+                            <li data-toggle="tab" class="active" id="sizeall" onclick="size_save('')">All Size</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-6 post-area">
+                    <div  id="property_content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content -->
+   
+    <!--Start Footer -->
+    <footer class="footer_area row">
+    	<div class="copy_right">
+    		© MADE WITH LOVE BY <a href="#">B.Y. Yang</a> ALL RIGHTS RESERVED
+    	</div>
+    </footer>
+    <!--End Footer -->
+
+    <!--jQuery JS-->
+    <script src="static/out/jquery/jquery-1.12.0.min.js"></script>
+    <!--jQuery ui JS-->
+	<script src="static/out/jquery/jquery-ui.min.js"></script>
+    <!--Bootstrap JS-->
+    <script src="static/out/bootstrap/bootstrap.min.js"></script> 
+    <!--Bootstrap-select JS-->
+    <script src="static/out/bootstrap-select/bootstrap-select.min.js"></script>
+    <!--Spin-->
+    <script src="static/out/spin/spin.umd.js"></script>
+    <script src="static/js/common.js"></script>
+    <script src="static/js/property_list.js"></script>
+    <script type="text/babel" src="static/js/prepertyloader.jsx"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+            GetUserFromCookie();
+			showUser();
+
+            $('#property_list_number_room').change(function() {
+                PropertySearch();
+            });
+
+            var urlSearchParams = new URLSearchParams(window.location.search);
+            var type = urlSearchParams.get('type');
+            var location = urlSearchParams.get('location');
+            var price = urlSearchParams.get('price');
+            var condition="";
+            if(type==null) type =1;
+            if(location==null) location="1";
+            if(price==null) price = 1;
+            var condition = "rentType = " + type;
+            condition += " and " + "province = " + location;
+            condition += " and " + "preferredPrice = " + price;
+            //const data = sessionStorage.getItem('search_data');
+
+            property_list_type = type;
+            property_list_location = location;
+            property_list_price = price;
+
+            $("#" + LIST_PROVINCE[parseInt(location)].split(" ")[0]).tab("show");
+            $("#rent-type-" + type).attr("checked",true);
+            $("#house-type-5").attr("checked",true);
+            $("#property_list_number_room").get(0).selectedIndex = 10;
+
+            $("#property_list_price_slide").slider({
+                range: true,
+                min: 0,
+                max: 12500,
+                values: [ LIST_PRICE_INTEGER[Number(price)], LIST_PRICE_INTEGER[Number(price)+1] ],
+                slide: price_save
+            });
+            $( "#amount" ).val("$" + LIST_PRICE_INTEGER[Number(price)] + " - $" + LIST_PRICE_INTEGER[Number(price)+1]);
+            property_list_price_range="preferredPrice = "+price;
+            g_condition = condition;
+            g_start = 0;
+            g_showNums = 20;
+            DoSearch(condition,g_start,g_showNums,ShowInfo);
+		});
+	</script>
+</body>
+</html>
+

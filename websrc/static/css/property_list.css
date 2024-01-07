@@ -1,0 +1,610 @@
+.house_info_h3{
+    background-color: white;
+    font-weight: bold;
+    font-size: x-large;
+    float: right;
+}
+
+.house_info_h5{
+    background-color: white;
+    color: blue;
+    font-size: small;
+    float: right;
+}
+
+.house_info_btn{
+    background-color: white;
+    font-size: x-large;
+    color: blue;
+}
+
+.property_list li {
+    list-style: none;
+    padding: 0;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font: 400 16px "Roboto", sans-serif;
+    font-weight: 400;
+    letter-spacing: .25px;
+    color: #617279;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.property_list li:hover,
+.property_list li:focus {
+    background-color: #96d036;
+    color: #ffffff
+}
+
+.property_list li a {
+    background: #f4f5f9
+}
+
+.property_list li a:hover,
+.property_list li a:focus {
+    background-color: #96d036;
+    color: #ffffff
+}
+
+.property_list .active {
+    background: #96d036
+}
+
+.property_list .active a {
+    color: #fff;
+    background: #96d036
+}
+
+
+.heading-item-area {
+    background: #f4f5f9
+}
+
+.heading-item-area .heading-list {
+    padding-top: 60px;
+    border-bottom: 2px solid #e5e6ed;
+    padding-bottom: 30px;
+    display: flex
+}
+
+.heading-item-area .heading-list .leftsite-by {
+    display: inline-flex;
+    width: 50%;
+    flex-direction: row;
+    padding-top: 10px
+}
+
+.heading-item-area .heading-list .leftsite-by h3 {
+    color: #3a4b51;
+    font: 500 18px "Roboto", sans-serif;
+    display: inline-block;
+    margin: 0
+}
+
+.heading-item-area .heading-list .leftsite-by h3 i {
+    font-size: 18px;
+    padding-right: 7px
+}
+
+.heading-item-area .heading-list .leftsite-by .feature_left_content {
+    padding-left: 20px
+}
+
+.heading-item-area .heading-list .leftsite-by .feature_left_content .btn-group.bootstrap-select {
+    border: 0
+}
+
+.heading-item-area .heading-list .leftsite-by .feature_left_content .btn-group.bootstrap-select .btn-default {
+    border: 1px solid #e1e2e9;
+    background-color: transparent;
+    color: #617279;
+    font: 400 14px/27px "Roboto", sans-serif;
+    width: 160px;
+    padding: 0;
+    padding-left: 15px
+}
+
+.heading-item-area .heading-list .leftsite-by .feature_left_content .btn-group.bootstrap-select .btn-default .bs-caret {
+    position: relative
+}
+
+.heading-item-area .heading-list .leftsite-by .feature_left_content .btn-group.bootstrap-select .btn-default .bs-caret:after {
+    content: "\e874";
+    font-family: 'Linearicons-Free';
+    position: absolute;
+    top: -4px;
+    right: 15px;
+    font-size: 12px
+}
+
+.heading-item-area .heading-list .leftsite-by .feature_left_content .btn-group.bootstrap-select .btn-default .bs-caret .caret {
+    display: none
+}
+
+.heading-item-area .heading-list .leftsite-by .feature_left_content .btn-group.bootstrap-select .btn-default:hover,
+.heading-item-area .heading-list .leftsite-by .feature_left_content .btn-group.bootstrap-select .btn-default:focus {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none !important;
+    border: 1px solid #e1e2e9
+}
+
+.heading-item-area .heading-list .leftsite-by .feature_left_content .btn-group.bootstrap-select .dropdown-menu {
+    min-width: 158px;
+    height: 100px;
+    margin: 0;
+    padding: 0
+}
+
+.heading-item-area .heading-list .leftsite-by .feature_left_content .btn-group.bootstrap-select .dropdown-menu li a {
+    color: #617279;
+    font: 400 14px/27px "Roboto", sans-serif
+}
+
+.heading-item-area .heading-list .center-site {
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    display: inline-flex;
+    float: none;
+    padding-top: 15px
+}
+
+.heading-item-area .heading-list .center-site a {
+    padding-left: 20px
+}
+
+.heading-item-area .heading-list .center-site a i {
+    color: #a6b3bc;
+    font-size: 20px
+}
+
+.heading-item-area .heading-list .center-site a:first-child {
+    padding: 0
+}
+
+.heading-item-area .heading-list .center-site a:hover i,
+.heading-item-area .heading-list .center-site a:focus i,
+.heading-item-area .heading-list .center-site a.active i {
+    color: #96d036
+}
+
+.heading-item-area .heading-list .right-site-bar {
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    display: inline-flex;
+    width: 50%;
+    flex-direction: row-reverse
+}
+
+.heading-item-area .heading-list .right-site-bar .navbar-form {
+    margin: 0;
+    padding: 0
+}
+
+.heading-item-area .heading-list .right-site-bar .navbar-form .form-group {
+    border: 0;
+    display: inline-block
+}
+
+.heading-item-area .heading-list .right-site-bar .navbar-form .form-group input.form-custom {
+    font-family: 'Linearicons-Free', "Roboto", sans-serif;
+    color: #617279;
+    font-size: 16px;
+    background: #fff;
+    border: 0;
+    display: block;
+    width: 280px;
+    height: 50px;
+    border-radius: 0;
+    padding-left: 20px;
+    margin-right: -5px;
+    box-shadow: none;
+    outline: none
+}
+
+.heading-item-area .heading-list .right-site-bar .navbar-form .form-group input.form-custom:hover,
+.heading-item-area .heading-list .right-site-bar .navbar-form .form-group input.form-custom:focus {
+    box-shadow: none;
+    outline: none;
+    border: 0
+}
+
+.heading-item-area .heading-list .right-site-bar .navbar-form .btn-submit {
+    display: block;
+    text-transform: uppercase;
+    font: 500 14px/50px "Roboto", sans-serif;
+    background: #96d036;
+    width: 110px;
+    color: #fff;
+    padding: 0;
+    display: inline-block;
+    border-radius: 0;
+    border: 0
+}
+
+.heading-item-area .heading-list .right-site-bar .navbar-form .btn-submit:hover,
+.heading-item-area .heading-list .right-site-bar .navbar-form .btn-submit:focus {
+    background: #ffc94f
+}
+
+.heading-item-area .all-widgets-area {
+    padding-top: 28px
+}
+
+.heading-item-area .all-widgets-area .widgets {
+    background: #fff;
+    margin-right: 15px
+}
+
+.heading-item-area .all-widgets-area .widgets h5 {
+    margin: 0;
+    color: #3a4b51;
+    font: 500 18px/50px "Roboto", sans-serif;
+    border-bottom: 1px solid #f4f5f9;
+    padding-left: 30px
+}
+
+.heading-item-area .all-widgets-area .widgets .list {
+    list-style: none;
+    padding: 0;
+    padding-left: 30px;
+    padding-bottom: 28px
+}
+
+.heading-item-area .all-widgets-area .widgets .list li {
+    color: #617279;
+    font: 400 16px "Roboto", sans-serif;
+    padding-top: 25px
+}
+
+.heading-item-area .all-widgets-area .appartnemt {
+    padding-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.heading-item-area .all-widgets-area .appartnemt .radio_area .radio_style {
+    list-style: none;
+    padding: 0;
+    padding-left: 26px
+}
+
+.heading-item-area .all-widgets-area .appartnemt .radio_area .radio_style li label {
+    color: #617279;
+    font: 400 16px "Roboto", sans-serif;
+    margin: 0;
+    padding-top: 26px
+}
+
+.heading-item-area .all-widgets-area .Price-Range ul {
+    padding-right: 30px !important
+}
+
+.heading-item-area .all-widgets-area .Price-Range ul li #property_list_price_slide {
+    background: #edeff5;
+    height: 5px;
+    border: 0
+}
+
+.heading-item-area .all-widgets-area .Price-Range ul li #property_list_price_slide .ui-state-default {
+    background: #7bb023;
+    border: 0;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    box-shadow: none;
+    outline: none;
+    top: -6px
+}
+
+.heading-item-area .all-widgets-area .Price-Range ul li #property_list_price_slide .ui-state-default:after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background: #96d036;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%
+}
+
+.heading-item-area .all-widgets-area .Price-Range ul li #property_list_price_slide .ui-widget-header {
+    background: #7bb023
+}
+
+.heading-item-area .all-widgets-area .Price-Range ul li input {
+    border: 0;
+    color: #617279;
+    padding-top: 15px
+}
+
+.heading-item-area .all-widgets-area .Flat-Filtering .Bathrooms {
+    padding: 26px 30px 30px 30px
+}
+
+.heading-item-area .all-widgets-area .Flat-Filtering .Bathrooms .Filtering {
+    padding-bottom: 16px
+}
+
+.heading-item-area .all-widgets-area .Flat-Filtering .Bathrooms .Filtering:last-child {
+    padding-bottom: 0
+}
+
+.heading-item-area .all-widgets-area .Flat-Filtering .Bathrooms .Filtering label {
+    color: #617279;
+    font: 400 16px "Roboto", sans-serif;
+    padding-bottom: 3px
+}
+
+.heading-item-area .all-widgets-area .Flat-Filtering .Bathrooms .Filtering .bootstrap-select .btn-default {
+    background: #fff;
+    border: 1px solid #e1e2e9;
+    box-shadow: none;
+    outline: none !important;
+    padding: 3px;
+    padding-left: 15px
+}
+
+.heading-item-area .all-widgets-area .Flat-Filtering .Bathrooms .Filtering .bootstrap-select .btn-default .bs-caret {
+    position: relative
+}
+
+.heading-item-area .all-widgets-area .Flat-Filtering .Bathrooms .Filtering .bootstrap-select .btn-default .bs-caret:after {
+    content: "\e874";
+    font-family: 'Linearicons-Free';
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    font-size: 12px
+}
+
+.heading-item-area .all-widgets-area .Flat-Filtering .Bathrooms .Filtering .bootstrap-select .btn-default .bs-caret .caret {
+    display: none
+}
+
+.heading-item-area .all-widgets-area .Flat-Filtering .Bathrooms .Filtering .bootstrap-select .dropdown-menu {
+    height: 115px
+}
+
+.heading-item-area .all-widgets-area .Size {
+    margin-top: 10px
+}
+
+.radio_style li input[type=radio] {
+    position: absolute;
+    visibility: hidden
+}
+
+.radio_style li {
+    position: relative
+}
+
+.radio_style li label {
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 1.35em;
+    padding: 0px 25px 21px 33px;
+    height: 16px;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+    font-family: "Roboto", sans-serif;
+    color: #617279;
+    font-size: 13px;
+    letter-spacing: .25px;
+    text-transform: uppercase
+}
+
+.radio_style li .check {
+    display: block;
+    position: absolute;
+    border: 1px solid #cdd0da;
+    border-radius: 100%;
+    height: 16px;
+    width: 16px;
+    top: 26px;
+    left: 7px;
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear
+}
+
+.radio_style li .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+    top: 3px;
+    left: 3px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear
+}
+
+.radio_style li input[type=radio]:checked~.check {
+    border: 1px solid #96d036
+}
+
+.radio_style li input[type=radio]:checked~.check::before {
+    background: #96d036
+}
+
+.radio_style li input[type=radio]:checked~label {
+    color: #617279
+}
+
+
+.post-area {
+    padding-right: 0
+}
+
+.post-area .Building-University {
+    padding-bottom: 30px
+}
+
+.post-area .Building-University .Building {
+    float: left
+}
+
+.post-area .Building-University .Building img {
+    /*max-width: 100%*/
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.post-area .Building-University .Building-content {
+    background: #fff;
+    padding: 40px;
+    padding-bottom: 50px;
+    display: block;
+    overflow: hidden
+}
+
+.post-area .Building-University .Building-content .right-area h3 {
+    margin: 0;
+    color: #3a4b51;
+    font: 500 24px "Roboto", sans-serif;
+    margin-top: -5px;
+    padding-bottom: 15px
+}
+
+.post-area .Building-University .Building-content .right-area .div-buttons {
+    margin-bottom: 0%;
+}
+
+.post-area .Building-University .Building-content .right-area .btn-slide {
+    font: 400 14px/40px "Roboto", sans-serif;
+    border-radius: 3px;
+    background-color: #f0f1f6;
+    padding: 4px 22px;
+    z-index: 295;
+    color: #617279
+}
+
+.post-area .Building-University .Building-content .right-area .btn-slide:hover,
+.post-area .Building-University .Building-content .right-area .btn-slide:focus {
+    background-color: #ffc949;
+    outline: none
+}
+
+.post-area .Building-University .Building-content .right-area .activ {
+    background-color: #ffc949;
+    color: #3a4b51
+}
+
+.post-area .Building-University .Building-content .right-area .info {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 56px;
+    padding-top: 50px
+}
+
+.post-area .Building-University .Building-content .right-area .info li {
+    color: #617279;
+    font: 400 16px/26px "Roboto", sans-serif;
+    list-style: none;
+    line-height: 25px
+}
+
+.post-area .Building-University .Building-content .right-area .info li:nth-child(2n+1) {
+    position: absolute;
+    left: 60%
+}
+
+.post-area .Building-University .Building-content .right-area .info li .lnr {
+    letter-spacing: 8px;
+    font-size: 18px
+}
+
+.post-area .Building-University .Building-content .right-area .Contact {
+    border-radius: 3px;
+    background-color: #96D036;
+    text-transform: uppercase;
+    color: #ffffff;
+    font: 500 14px/50px "Roboto", sans-serif;
+    width: 196px;
+    display: inline-block;
+    padding-left: 28px;
+    float: left;
+    position: relative
+}
+
+.post-area .Building-University .Building-content .right-area .Contact:hover,
+.post-area .Building-University .Building-content .right-area .Contact:focus {
+    background: #ffc949;
+    color: #ffffff
+}
+
+.post-area .Building-University .Building-content .right-area .Contact:hover i,
+.post-area .Building-University .Building-content .right-area .Contact:focus i {
+    transform: translateX(6px)
+}
+
+.post-area .Building-University .Building-content .right-area .Contact i {
+    font-size: 16px;
+    position: absolute;
+    top: 15px;
+    right: 24px;
+    transition: all 300ms linear 0s;
+    transform: translateZ(0);
+    transition-property: transform
+}
+
+.post-area .Building-University .Building-content h2 {
+    color: #ffc949;
+    font: italic 700 36px "Roboto", sans-serif;
+    display: inline-block;
+    margin: 0;
+    padding-left: 30px
+}
+
+.post-area .Load-more {
+    padding-top: 30px;
+    padding-bottom: 100px
+}
+
+.post-area .Load-more a {
+    color: #617279;
+    font: 500 14px/50px "Roboto", sans-serif;
+    text-transform: uppercase;
+    border: 1px solid #e1e2e9;
+    display: block;
+    width: 287px;
+    padding-left: 50px;
+    border-radius: 4px;
+    position: relative;
+    margin: 0 auto
+}
+
+.post-area .Load-more a i {
+    font-size: 18px;
+    right: 50px;
+    position: absolute;
+    top: 15px;
+    transition: all 300ms linear 0s;
+    transform: rotate(0deg)
+}
+
+.post-area .Load-more a:hover,
+.post-area .Load-more a:focus {
+    background: #96D036;
+    border: 1px solid #96D036;
+    color: #ffffff
+}
+
+.post-area .Load-more a:hover i,
+.post-area .Load-more a:focus i {
+    color: #ffffff;
+    transform: rotate(180deg)
+}

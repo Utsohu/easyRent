@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>EasyRent.B.Y.</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=""/>
+	<!-- Meta tag Keywords -->
+
+    <!--Bootstrap-->
+	<link rel="stylesheet" type="text/css" href="static/out/bootstrap/bootstrap.min.css" media="all" /> 
+    <!--Bootstrap-select CSS-->
+	<link rel="stylesheet" type="text/css" href="static/out/bootstrap-select/bootstrap-select.min.css" media="all" />
+	<!-- Font-Awesome-Icons-CSS -->
+	<link rel="stylesheet" href="static/css/fontawesome.css">
+
+	<link rel="stylesheet" href="static/css/create_info.css" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" href="static/css/common.css" media="all" /> 
+</head>
+
+<body>
+    <!-- Start Header Nav-->
+    <nav class="navbar navbar-default nav_custom row">
+        <div class="container coustome-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand_logo" href="index.html"><img src="static/img/logo.png" alt="Logo"></a>
+            </div>
+
+            <div class="row collapse navbar-collapse" id="main_menu">
+                <ul class="nav navbar-right nav_buttom">
+                     <li><a id="login_or_exit" onclick="onLoginClick()">Login<i class="lnr lnr-arrow-right"></i></a></li>
+					 <li id="current_user_name"></li>
+				</ul>
+                <ul class="nav navbar-nav navbar-menu">
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="property_list.html">Information List</a></li>
+                    <li><a href="#" onclick = "PostInformation()">Post</a></li>
+                </ul>
+            </div>
+        </div> 
+    </nav>  
+    <!-- End Header Nav -->
+	<!-- Start content -->
+	<div class="show_info_main">
+		<form action="#" method="post">
+			<section>
+			<h2>Add Information
+				<i class="fas fa-level-down-alt"></i>
+			</h2>
+			<div class="form-group">
+				<label>
+					<i class="fas fa-user"></i>
+					Title
+				</label>
+				<input placeholder="Please Input Title" id="title_input" name="Name" type="text" required="">
+				</input>
+			</div>
+			<div class="form-group-o">
+				<label>
+					<i class="fas fa-adjust"></i>
+					Type
+				</label>
+				<select class="selectpicker" id ="type_rent_input" onchange="changeRentType()">
+					<option>Seek Rent</option>
+					<option>For Rent</option>
+					<option>Sublet</option>
+				</select>
+			</div>
+			<div class="form-group-o" style="margin-left: 33px; margin-right: 33px;">
+				<label>
+					<i class="fas fa-adjust"></i>
+					Price
+				</label>
+				<select class="selectpicker" id ="price_input">
+					<option>less than $1000</option> 
+					<option>$1000 to $2500</option>
+					<option>$2500 to $5000</option>
+					<option>$5000 to $10000</option>
+					<option>more than $10000</option>
+				</select>
+			</div>
+			<div class="form-group-o">
+				<label>
+					<i class="fas fa-adjust"></i>
+					Num_People
+				</label>
+				<select class="selectpicker" id ="num_people_input">
+					<option>1 person</option>
+					<option>2 people</option>
+					<option>3-4 people</option>
+					<option>more than 4 people</option>
+				</select>
+			</div>
+			<div class="form-group-o">
+				<label>
+					<i class="fas fa-adjust"></i>
+					Province
+				</label>
+				<select class="selectpicker" id ="province_input">
+					<option>British Columbia</option> 
+					<option>Alberta</option>
+					<option>Saskatchewan</option>
+					<option>Manitoba</option>
+					<option>Ontario</option>
+					<option>Quebec</option>
+					<option>Nova Scotia</option>
+					<option>Prince Edward Island</option>
+					<option>Newfoundland & Labrador</option>
+				</select>
+			</div>
+			<div class="form-group-o" style="margin-left: 33px; margin-right: 33px;">
+				<label>
+					<i class="fas fa-adjust"></i>
+					City
+				</label>
+				<input placeholder="Please Input City Information" id="city_input" type="text" name="Name" required=""></input>
+			</div>
+			<div class="form-group-o">
+				<label>
+					<i class="fas fa-adjust"></i>
+					Location
+				</label>
+				<input placeholder="Please Input Rough Location" id="location_input" name="Name" type="text" required=""></input>
+			</div>
+			<div class="form-group">
+				<label>
+					<i class="fas fa-user"></i>
+					Content
+				</label>
+				<textarea placeholder="Please Input Content" id="content_input" name="Name" type="text" style="height: 200px;"></textarea>
+			</div>
+			</section>
+			<section id="add_new_house_section" style="display:none">
+				<div class="form-group">
+					<label>
+						<i class="fas fa-user"></i>
+						House Name
+					</label>
+					<input placeholder="Please Input House Name" id="house_name_input" name="Name" type="text" required=""></input>
+				</div>
+				<div class="form-group-o">
+					<label>
+						<i class="fas fa-adjust"></i>
+						Level of decoration
+					</label>
+					<select class="selectpicker" id ="type_level_decoration_input">
+						<option>normal</option>
+						<option>low</option>
+						<option>high</option>
+						<option>extremely high</option>
+					</select>
+				</div>
+				<div class="form-group-o" style="margin-left: 33px; margin-right: 33px;">
+					<label>
+						<i class="fas fa-adjust"></i>
+						Type of House
+					</label>
+					<select class="selectpicker" id ="type_house_input">
+						<option>Detached</option> 
+						<option>Semi-Detached</option>
+						<option>Townhouse</option>
+						<option>Property</option>
+						<option>Condominium</option>
+					</select>
+				</div>
+				<div class="form-group-o">
+					<label>
+						<i class="fas fa-adjust"></i>
+						Number of bedrooms
+					</label>
+					<select class="selectpicker" id ="num_bedroom_input">
+						<option>1 bedroom</option>
+						<option>2 bedrooms</option>
+						<option>3-4 bedrooms</option>
+						<option>more than 4 bedrooms</option>
+					</select>
+				</div>
+				<div class="form-group-o">
+					<label>
+						<i class="fas fa-adjust"></i>
+						Price
+					</label>
+					<input placeholder="Please Input Price Information" id="house_price_input" type="text" name="Name" required=""></input>
+				</div>
+				<div class="form-group-o" style="margin-left: 33px; margin-right: 33px;">
+					<label>
+						<i class="fas fa-adjust"></i>
+						Location
+					</label>
+					<input placeholder="Please Input Location" id="house_location_input" type="text" name="Name" required=""></input>
+				</div>
+				<div class="form-group-o">
+					<label>
+						<i class="fas fa-adjust"></i>
+						Area
+					</label>
+					<input placeholder="Please Input Rough Area" id="house_area_input" name="Name" type="text" required=""></input>
+				</div>
+				<div class="form-group">
+					<label>
+						<i class="fas fa-user"></i>
+						Description
+					</label>
+					<textarea placeholder="Please Input House Description" id="house_description_input" name="Name" type="text" style="height: 200px;"></textarea>
+				</div>
+				<div class="form-group-o">
+					<label>
+						<i class="fas fa-adjust"></i>
+						Picture 1
+					</label>
+					<input placeholder="Please Upload a Picture" id="house_picture1_input" type="file" onclick="addPicture('house_picture1_input','house_picture1_preview')"></input>
+					<div id="house_picture1_preview"></div>
+				</div>
+				<div class="form-group-o" style="margin-left: 33px; margin-right: 33px;">
+					<label>
+						<i class="fas fa-adjust"></i>
+						Picture 2
+					</label>
+					<input placeholder="Please Upload a Picture" id="house_picture2_input" type="file" onclick="addPicture('house_picture2_input','house_picture2_preview')"></input>
+					<div id="house_picture2_preview"></div>
+				</div>
+				<div class="form-group-o">
+					<label>
+						<i class="fas fa-adjust"></i>
+						Picture 3
+					</label>
+					<input placeholder="Please Upload a Picture" id="house_picture3_input" type="file" onclick="addPicture('house_picture3_input','house_picture3_preview')"></input>
+					<div id="house_picture3_preview"></div>
+				</div>
+			</section>
+			<input class = "login_btn" type="button" value="Release" onclick="CreateInfo()" style="margin:auto;"></input>
+		</form>
+	</div>
+	<!-- End content -->
+
+    <!--Start Footer -->
+    <footer class="footer_area row">
+    	<div class="copy_right">
+    		© MADE WITH LOVE BY <a href="#">B.Y. Yang</a> ALL RIGHTS RESERVED
+    	</div>
+    </footer>
+    <!--End Footer -->
+    <!--jQuery JS-->
+    <script src="static/out/jquery/jquery-1.12.0.min.js"></script>
+    <script src="static/js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="static/js/create_info.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			GetUserFromCookie();
+			showUser();
+		});
+	</script>
+</body>
+
+</html>

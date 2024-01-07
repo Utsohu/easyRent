@@ -1,0 +1,316 @@
+
+.search_from_aria {
+    background-image: url("../img/slider.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 110px;
+    padding-bottom: 257px
+}
+
+.search_from_aria .search_img_bg {
+    margin: 0
+}
+
+.search_from_aria .search_img_bg h2 {
+    text-align: center;
+    font: 900 28px/40px "Roboto", sans-serif;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    padding: 50px
+}
+
+.search_from_aria .search_img_bg .dropdwon_section {
+    display: block;
+    background: #fff;
+    box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 4px
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area {
+    background: #fff;
+    position: relative;
+    border-radius: 4px
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area:after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 1px;
+    background: #e5eaed;
+    top: 15px;
+    left: 0
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area:nth-child(2) .media .media-body .btn-group.bootstrap-select .btn-default .bs-caret:after {
+    left: -30px
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area:nth-child(2) .media .media-body .btn-group.bootstrap-select .dropdown-menu.open {
+    width: 170px
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area:nth-child(3) .media .media-body .btn-group.bootstrap-select .btn-default .bs-caret:after {
+    left: -20px
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area:nth-child(3) .media .media-body .btn-group.bootstrap-select .dropdown-menu.open {
+    width: 170px
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area:first-child:after {
+    display: none
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area:last-child:after {
+    display: none
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media {
+    overflow: visible
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-left {
+    padding: 0
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-left .location {
+    color: #3a4b51;
+    font: 500 14px/70px "Roboto", sans-serif;
+    padding-left: 25px;
+    margin: 0;
+    text-transform: uppercase
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-body {
+    width: 180px;
+    overflow: visible;
+    padding-left: 25px
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-body .btn-group.bootstrap-select {
+    width: 100%
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-body .btn-group.bootstrap-select .btn-default {
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none !important;
+    padding: 0
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-body .btn-group.bootstrap-select .btn-default .filter-option {
+    color: #a6b2b6;
+    font: 400 14px/70px "Roboto", sans-serif
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-body .btn-group.bootstrap-select .btn-default .bs-caret {
+    position: relative
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-body .btn-group.bootstrap-select .btn-default .bs-caret:after {
+    content: "\e874";
+    font-family: 'Linearicons-Free';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    color: #233943
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-body .btn-group.bootstrap-select .btn-default .bs-caret .caret {
+    display: none
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-body .btn-group.bootstrap-select .dropdown-menu.open {
+    width: 190px;
+    border: 0
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .media .media-body .btn-group.bootstrap-select .dropdown-menu.open li a {
+    padding: 10px;
+    color: #a6b2b6;
+    font: 400 14px "Roboto", sans-serif
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .btn-search {
+    background: #96d036;
+    border-radius: 0 4px 4px 0px;
+    text-transform: uppercase;
+    font: 500 14px/70px "Roboto", sans-serif;
+    color: #fff;
+    display: block;
+    padding-left: 115px;
+    position: relative;
+    border-radius: 0px
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .btn-search i {
+    font-size: 18px;
+    position: absolute;
+    top: 24px;
+    right: 110px;
+    transition: all 300ms linear 0s;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transition-property: transform
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .btn-search:hover,
+.search_from_aria .search_img_bg .dropdwon_section .search-area .btn-search:focus {
+    background: #ffc949
+}
+
+.search_from_aria .search_img_bg .dropdwon_section .search-area .btn-search:hover i,
+.search_from_aria .search_img_bg .dropdwon_section .search-area .btn-search:focus i {
+    -webkit-transform: translateX(6px);
+    -moz-transform: translateX(6px);
+    -o-transform: translateX(6px);
+    transform: translateX(6px)
+}
+
+
+.latest-houses {
+    background-color: #f4f8fa
+}
+
+.latest-houses .latest_head {
+    padding-bottom: 85px
+}
+
+.latest-houses .latest_head h2 {
+    padding-top: 60px;
+    text-align: center;
+    font: 500 24px/32px "Roboto", sans-serif;
+    text-transform: uppercase;
+    color: #3a4b51;
+    padding-bottom: 45px
+}
+
+.latest-houses .latest_head h2:after {
+    content: "";
+    background-color: #3a4b51;
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    margin-top: 40px;
+    margin-left: -150px
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat {
+    background-color: #FFFFFF
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat h4 {
+    font: 18px/24px "Roboto", sans-serif;
+    color: #3a4b51;
+    position: relative
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area {
+    padding: 17px
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .btn-flat {
+    font: 400 14px/40px "Roboto", sans-serif;
+    border-radius: 3px;
+    background-color: #aab5bc;
+    padding: 4px 22px;
+    z-index: 295;
+    color: #fff
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .btn-flat:hover,
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .btn-flat:focus {
+    background-color: #ffc949;
+    outline: none
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .activ {
+    background-color: #ffc949
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .info {
+    margin-top: 20px;
+    margin-left: -35px
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .info li {
+    color: #3a4b51;
+    font: 400 14px/24px "Roboto", sans-serif;
+    list-style: none;
+    line-height: 25px
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .info li:nth-child(2n+1) {
+    position: absolute;
+    left: 50%
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .info li .lnr {
+    letter-spacing: 8px
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .contact {
+    border-radius: 3px;
+    background-color: #96D036;
+    border: 1px solid #96D036;
+    text-transform: uppercase;
+    color: #ffffff;
+    font: 500 14px/40px "Roboto", sans-serif;
+    width: 170px;
+    display: inline-block;
+    margin: 15px 0;
+    padding-left: 22px;
+    float: left;
+    position: relative
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .contact:hover,
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .contact:focus {
+    background: #ffc949;
+    color: #ffffff;
+    border: 1px solid #ffffff
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .contact:hover i,
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .contact:focus i {
+    transform: translateX(6px)
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area .contact i {
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    margin-left: 10px;
+    transition: all 300ms linear 0s;
+    transform: translateZ(0);
+    transition-property: transform
+}
+
+.latest-houses .latest_head .properties-slider .ready_flat .content-area h3 {
+    color: #ffc949;
+    font: italic 700 30px/26px "Roboto", sans-serif;
+    display: inline-block;
+    margin: 20px 30px
+}
+
+.latest-houses .latest_head .owl-dots {
+    text-align: center;
+    padding-top: 40px
+}
+
+.latest-houses .latest_head .owl-dots .owl-dot {
+    background-color: #aec1ca;
+    height: 3px;
+    width: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px
+}
+
+.latest-houses .latest_head .owl-dots .active {
+    background: #96d036
+}

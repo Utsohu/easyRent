@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>EasyRent.B.Y.</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=""/>
+	<!-- Meta tag Keywords -->
+
+    <!--Bootstrap-->
+	<link rel="stylesheet" type="text/css" href="static/out/bootstrap/bootstrap.min.css" media="all" /> 
+    <!--Bootstrap-select CSS-->
+	<link rel="stylesheet" type="text/css" href="static/out/bootstrap-select/bootstrap-select.min.css" media="all" />
+    <!--Linearicons Icons CSS-->
+    <link rel="stylesheet" href="static/out/linearicons/Linearicons.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<link rel="stylesheet" href="static/css/fontawesome.css">
+    <!--Spin CSS-->
+	<link rel="stylesheet" type="text/css" href="static/out/spin/spin.css" media="all" /> 
+
+	<link rel="stylesheet" href="static/css/create_info.css" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" href="static/css/common.css" media="all" /> 
+</head>
+
+<body>
+    <!-- Start Header Nav-->
+    <nav class="navbar navbar-default nav_custom row">
+        <div class="container coustome-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand_logo" href="index.html"><img src="static/img/logo.png" alt="Logo"></a>
+            </div>
+
+            <div class="row collapse navbar-collapse" id="main_menu">
+                <ul class="nav navbar-right nav_buttom">
+                     <li><a id="login_or_exit" onclick="onLoginClick()">Login<i class="lnr lnr-arrow-right"></i></a></li>
+					 <li id="current_user_name"></li>
+				</ul>
+                <ul class="nav navbar-nav navbar-menu">
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="property_list.html">Information List</a></li>
+                    <li><a href="#" onclick = "PostInformation()">Post</a></li>
+                </ul>
+            </div>
+        </div> 
+    </nav>  
+    <!-- End Header Nav -->
+     <!-- Start Banner -->
+     <section class="banner-area row">
+		<h2>Property Show</h2>
+		<div class="bottom-menu-area">
+			<a href="index.html">home</a>
+			<i class="lnr lnr-chevron-right"></i>
+			<a href="property_show.html">Property Show</a>
+		</div>
+	</section>
+	<!-- End Banner -->
+	<!-- Start Content -->
+	<div class="container" style="width: 1360px;">
+		<div class="col-md-10 col-sm-6 ">
+			<div class="show_info_main">
+				<form action="#" method="post">
+					<section>
+					<div class="form-group">
+						<label>
+							<i class="fas fa-user"></i>
+							Title
+						</label>
+						<input placeholder="Please Input Title" id="title_input" name="Name" type="text" required="">
+						</input>
+					</div>
+					<div class="form-group-o">
+							<label>
+								<i class="fas fa-adjust"></i>
+								Type
+							</label>
+								<input id ="type_rent_input" type="text">
+								</input>
+					</div>
+					<div class="form-group-o" style="margin-left: 22px; margin-right: 22px;">
+							<label>
+								<i class="fas fa-adjust"></i>
+								Price
+							</label>
+								<input type="text" id ="price_input">
+								</input>
+					</div>
+					<div class="form-group-o">
+							<label>
+								<i class="fas fa-adjust"></i>
+								Num_People
+							</label>
+								<input id ="num_people_input" type="text">
+								</input>
+					</div>
+					<div class="form-group-o">
+							<label>
+								<i class="fas fa-adjust"></i>
+								Province
+							</label>
+								<input id ="province_input" type="text">
+								</input>
+					</div>
+					<div class="form-group-o" style="margin-left: 22px; margin-right: 22px;">
+							<label>
+								<i class="fas fa-adjust"></i>
+								City
+							</label>
+							<input placeholder="Please Input City Information" id="city_input" type="text" name="Name" required=""></input>
+					</div>
+					<div class="form-group-o">
+							<label>
+								<i class="fas fa-adjust"></i>
+								Location
+							</label>
+							<input placeholder="Please Input Rough Location" id="location_input" name="Name" type="text" required="">
+						</input>
+					</div>
+					<div class="form-group">
+						<label>
+							<i class="fas fa-user"></i>
+							Content
+						</label>
+						<textarea placeholder="Please Input Content" id="content_input" name="Name" type="text" style="height: 200px;"></textarea>
+					</div>
+					</section>
+
+					<section id="add_new_house_section" style="display:none">
+						<div class="form-group">
+							<label>
+								<i class="fas fa-user"></i>
+								House Name
+							</label>
+							<input placeholder="Please Input House Name" id="house_name_input" name="Name" type="text" required="">
+							</input>
+						</div>
+						<div class="form-group-o">
+								<label>
+									<i class="fas fa-adjust"></i>
+									Level of decoration
+								</label>
+									<input id ="type_level_decoration_input" type="text">
+									</input>
+						</div>
+						<div class="form-group-o" style="margin-left: 22px; margin-right: 22px;">
+								<label>
+									<i class="fas fa-adjust"></i>
+									Type of House
+								</label>
+									<input id ="type_house_input" type="text">
+									</input>
+						</div>
+						<div class="form-group-o">
+								<label>
+									<i class="fas fa-adjust"></i>
+									Number of bedrooms
+								</label>
+									<input id ="num_bedroom_input" type="text">
+									</input>
+						</div>
+						<div class="form-group-o">
+								<label>
+									<i class="fas fa-adjust"></i>
+									Price
+								</label>
+								<input placeholder="Please Input Price Information" id="house_price_input" type="text" name="Name" required=""></input>
+						</div>
+						<div class="form-group-o" style="margin-left: 22px; margin-right: 22px;">
+								<label>
+									<i class="fas fa-adjust"></i>
+									Location
+								</label>
+								<input placeholder="Please Input Location" id="house_location_input" type="text" name="Name" required=""></input>
+						</div>
+						<div class="form-group-o">
+								<label>
+									<i class="fas fa-adjust"></i>
+									Area
+								</label>
+								<input placeholder="Please Input Rough Area" id="house_area_input" name="Name" type="text" required="">
+							</input>
+						</div>
+						<div class="form-group">
+							<label>
+								<i class="fas fa-user"></i>
+								Description
+							</label>
+							<textarea placeholder="Please Input House Description" id="house_description_input" name="Name" type="text" style="height: 200px;"></textarea>
+						</div>
+						<div class="form-group-o">
+							<label>
+								<i class="fas fa-adjust"></i>
+								Picture 1
+							</label>
+							<div id="house_picture1_preview"></div>
+						</div>
+
+						<div class="form-group-o" style="margin-left: 5px; margin-right: 5px;">
+							<label>
+								<i class="fas fa-adjust"></i>
+								Picture 2
+							</label>
+							<div id="house_picture2_preview"></div>
+						</div>
+						
+						<div class="form-group-o">
+							<label>
+								<i class="fas fa-adjust"></i>
+								Picture 3
+							</label>
+							<div id="house_picture3_preview"></div>
+						</div>
+					</section>
+				</form>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-6 ">
+			<div class="agent">
+				<h4>Contact</h4>
+				<div class="agent_info">
+					<div class="profile_info">
+						<div class="profile_pic">
+							<img class="img-circle" id="user_icon" src="static/img/defaultuser.jpg" alt="">
+						</div>
+						<div class="name_position">
+							<h3 id="user_name">Robin Ikram</h3>
+							<h4 id="user_title">Real Estate Agent</h4>
+						</div>
+					</div>
+					<div class="more_info">
+						<ul>
+							<li id="user_phone"><i class="fa fa-phone" aria-hidden="true"></i>1-23-456-7895</li>
+							<li id="user_mail"><i class="fa fa-fax" aria-hidden="true"></i>robin_ikrm@gmail.com</li>
+							<li id="user_location"><i class="fa fa-briefcase" aria-hidden="true"></i>7/A, Gulshan road, Paris</li>
+						</ul>
+						<p id="user_content">Not so many years ago businesses used to grunt at using illustrations in their marketing materials. But today, the use and influence of illustrations is growing right along. An illustration, image or picture that does</p >
+					</div>
+				</div>
+			</div>
+			<div class="sent_message">
+				<h4>Release Comments</h4>
+				<form>
+					<textarea class="form-control" rows="13" placeholder="Write comments"></textarea>
+					<input class = "login_btn" type="button" value="commit" onclick="Commit()"></input>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- End Content -->
+
+    <!--Start Footer -->
+    <footer class="footer_area row">
+    	<div class="copy_right">
+    		© MADE WITH LOVE BY <a href="#">B.Y. Yang</a> ALL RIGHTS RESERVED
+    	</div>
+    </footer>
+    <!--End Footer -->
+	<!-- Jquery -->
+    <script src="static/out/jquery/jquery-1.12.0.min.js"></script>
+    <!--jQuery ui JS-->
+	<script src="static/out/jquery/jquery-ui.min.js"></script>
+    <!--Spin-->
+    <script src="static/out/spin/spin.umd.js"></script>
+    <script src="static/js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/js/property_show.js"></script>
+	<!-- //Jquery -->
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			GetUserFromCookie();
+			showUser();
+            var urlSearchParams = new URLSearchParams(window.location.search);
+            var id = urlSearchParams.get('id');
+            //const data = sessionStorage.getItem('search_data');
+			if(id==null) id = 1;
+			var data = {
+				"id":  id
+			};
+
+			$.ajax({
+				url: "/showDetail",  //请求的url地址
+				dataType: "json",  //返回格式为json
+				async: true, //请求是否异步，默认为异步，这也是ajax重要特性
+				data: JSON.stringify(data), //参数值
+				type: "POST",  //请求方式
+				beforeSend: function() {
+					//请求前的处理
+				},
+				success: function(req) {
+					//请求成功时处理
+					Property_show_detail(req);
+				},
+				complete: function() {
+					//请求完成的处理
+				},
+				error: function() {
+					alert("The message does not exist!!!")
+					//请求出错处理
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

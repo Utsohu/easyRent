@@ -1,0 +1,168 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+ 
+	<title>EasyRent.B.Y.</title>
+    <!--Bootstrap-->
+	<link rel="stylesheet" type="text/css" href="static/out/bootstrap/bootstrap.min.css" media="all" /> 
+    <!--Bootstrap-select CSS-->
+	<link rel="stylesheet" type="text/css" href="static/out/bootstrap-select/bootstrap-select.min.css" media="all" />
+    <!--Owl_Carousel CSS-->
+	<link rel="stylesheet" type="text/css" href="static/out/owl-carousel/owl.carousel.css" media="all" />
+    <!--Linearicons Icons CSS-->
+	<link rel="stylesheet" href="static/out/linearicons/Linearicons.css"> 
+    <!--Spin CSS-->
+	<link rel="stylesheet" type="text/css" href="static/out/spin/spin.css" media="all" /> 
+
+	<link rel="stylesheet" type="text/css" href="static/css/common.css" media="all" /> 
+	<link rel="stylesheet" type="text/css" href="static/css/index.css" media="all" /> 
+    
+    <!--	<script type="text/javascript" src="static/libs/react/react.production.min.js"></script>
+    <script type="text/javascript" src="static/libs/react/react-dom.production.min.js"></script>-->
+	<script type="text/javascript" src="static/libs/react/react.development.js"></script>
+    <script type="text/javascript" src="static/libs/react/react-dom.development.js"></script>
+    <script type="text/javascript" src="static/libs/babel/babel.min.js"></script>
+</head>
+<body> 
+    <!-- Start Header Nav-->
+    <nav class="navbar navbar-default nav_custom row">
+        <div class="container coustome-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand_logo" href="index.html"><img src="static/img/logo.png" alt="Logo"></a>
+            </div>
+
+            <div class="row collapse navbar-collapse" id="main_menu">
+                <ul class="nav navbar-right nav_buttom">
+                     <li><a id="login_or_exit" onclick="onLoginClick()">Login<i class="lnr lnr-arrow-right"></i></a></li>
+					 <li id="current_user_name"></li>
+				</ul>
+                <ul class="nav navbar-nav navbar-menu">
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="property_list.html">Information List</a></li>
+                    <li><a href="#" onclick = "PostInformation()">Post</a></li>
+                </ul>
+            </div>
+        </div> 
+    </nav>  
+    <!-- End Header Nav -->
+    <div id="mainshow" style="position: absolute; left:50%; top:50%; transform:translate(-50%,-50%);width:100px;height:100px"></div>
+    <!-- Start Search Area --> 
+	<section class="search_from_aria row">
+	    <div class="container coustome-container">
+            <div class="row search_img_bg">
+                <h2>Come On! Find Your Perfect Home!</h2> 
+                <div class="dropdwon_section row m0"> 
+                   <div class="col-md-3 col-sm-6 p0 search-area">
+                        <div class="media">
+                            <div class="media-left">
+                                <h3 class="location">Rent Type</h3>
+                            </div>
+                            <div class="media-body">
+                                <select class="selectpicker" id="index_type_rent">
+									<option>Seek Rent</option>
+									<option>For Rent</option>
+									<option>Sublet</option>
+                                </select>
+                            </div>
+                        </div>
+                   </div>
+                    <div class="col-md-3 col-sm-6 p0 search-area">
+                        <div class="media">
+                            <div class="media-left">
+                                <h3 class="location">Location</h3>
+                            </div>
+                            <div class="media-body">
+                                <select class="selectpicker" id="index_location">
+									<option>Alberta</option>
+									<option>British Columbia</option> 
+									<option>Manitoba</option>
+									<option>New Brunswick</option>
+									<option>Newfoundland & Labrador</option>
+									<option>Nova Scotia</option>
+									<option>Ontario</option>
+									<option>Prince Edward Island</option>
+									<option>Quebec</option>
+									<option>Saskatchewan</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-md-3 col-sm-6 p0 search-area">
+                        <div class="media">
+                            <div class="media-left">
+                                <h3 class="location">Price Range</h3>
+                            </div>
+                            <div class="media-body">
+                                <select class="selectpicker" id="index_price">
+									<option>less than $1000</option> 
+									<option>$1000 to $2500</option>
+									<option>$2500 to $5000</option>
+									<option>$5000 to $10000</option>
+									<option>more than $10000</option>
+                                </select>
+                            </div>
+                        </div>    
+                   </div>
+                   <div class="col-md-3 col-sm-6 p0 search-area">
+                       <a href="#" class="btn-search" onclick="indexDoSearch()">search <i class="lnr lnr-arrow-right"></i></a>
+                   </div>
+                </div>
+            </div> 
+	    </div>
+	</section>  
+    <!-- End Search Area --> 
+
+   	<!--Start Latest Houses -->
+	<section class="latest-houses row">
+		<div class="container coustome-container">
+			<div class="row m0 latest_head" id="index_content">
+			</div>
+		</div>
+	</section>
+	<!--End Latest Houses -->
+
+    <!--Start Footer -->
+    <footer class="footer_area row">
+    	<div class="copy_right">
+    		© MADE WITH LOVE BY <a href="#">B.Y. Yang</a> ALL RIGHTS RESERVED
+    	</div>
+    </footer>
+    <!--End Footer -->
+
+    <!--jQuery JS-->
+    <script src="static/out/jquery/jquery-1.12.0.min.js"></script>
+    <!--Bootstrap JS-->
+    <script src="static/out/bootstrap/bootstrap.min.js"></script> 
+    <!--Bootstrap-select JS-->
+    <script src="static/out/bootstrap-select/bootstrap-select.min.js"></script>
+    <!--Owl Carousel JS-->
+    <script src="static/out/owl-carousel/owl.carousel.min.js"></script>
+    <!--jQuery ui JS-->
+	<script src="static/out/jquery/jquery-ui.min.js"></script>
+    <!--Spin-->
+    <script src="static/out/spin/spin.umd.js"></script>
+
+    <script src="static/js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/babel" src="static/js/indexloader.jsx"></script>
+    <script src="static/js/index.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+			GetUserFromCookie();
+			showUser();
+			DoSearch("rentType=1 or rentType=2", 0, 9, showIndexContent);
+		});
+	</script>
+
+</body>
+</html>
+

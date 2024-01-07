@@ -1,0 +1,232 @@
+.m0 {
+    margin: 0
+}
+
+.p0 {
+    padding: 0
+}
+
+body {
+    font-family: "Roboto", sans-serif
+}
+
+body p {
+    font-family: "Roboto", sans-serif;
+    line-height: 24px;
+    color: #999
+}
+
+
+@media (min-width: 1300px) {
+    .coustome-container {
+        width: 1260px;
+        padding: 0px 15px
+    }
+}
+
+.navbar-default.nav_custom.affix {
+    width: 100%;
+    top: 0;
+    z-index: 999
+}
+
+.navbar-default.nav_custom.affix+section,
+.navbar-default.nav_custom.affix+div,
+.navbar-default.nav_custom.affix+.row {
+    margin-top: 82px
+}
+
+.navbar-default.nav_custom.navbar-fixed-top.affix+section,
+.navbar-default.nav_custom.navbar-fixed-top.affix+div,
+.navbar-default.nav_custom.navbar-fixed-top.affix+.row {
+    margin-top: 0px
+}
+
+.nav_custom {
+    background: #FFFFFF;
+    margin: 0
+}
+
+.nav_custom .navbar-brand_logo img {
+    margin-top: 10px
+}
+
+.nav_custom #main_menu {
+    text-transform: uppercase
+}
+
+.nav_custom #main_menu .navbar-menu {
+    float: right;
+    padding: 0 25px
+}
+
+.nav_custom #main_menu .navbar-menu li a {
+    padding: 20px;
+    color: #3a4b51;
+    font: 400 13px/40px "Roboto", sans-serif
+}
+
+.nav_custom #main_menu .navbar-menu li a:hover,
+.nav_custom #main_menu .navbar-menu li a:focus {
+    color: #96d036
+}
+
+.nav_custom #main_menu .navbar-menu .dropdown a {
+    background-color: transparent
+}
+
+.nav_custom #main_menu .navbar-menu .dropdown .dropdown-menu {
+    border: 0;
+    border-top: 4px solid #96d036;
+    border-bottom: 4px solid #96d036;
+    padding: 0;
+    transition: all 300ms linear 0s;
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+}
+
+@media (min-width: 768px) {
+    .nav_custom #main_menu .navbar-menu .dropdown .dropdown-menu {
+        display: block;
+        transform: scale(1, 0);
+        transform-origin: top
+    }
+}
+
+.nav_custom #main_menu .navbar-menu .dropdown .dropdown-menu li a {
+    padding: 0;
+    padding-left: 10px;
+    border-left: 2px solid #fff
+}
+
+.nav_custom #main_menu .navbar-menu .dropdown .dropdown-menu li a:hover,
+.nav_custom #main_menu .navbar-menu .dropdown .dropdown-menu li a:focus {
+    background: #eaeff2;
+    border-left: 2px solid #96d036
+}
+
+@media (min-width: 768px) {
+    .nav_custom #main_menu .navbar-menu .dropdown:hover .dropdown-menu {
+        transform: scale(1, 1)
+    }
+}
+
+.nav_custom #main_menu .nav_buttom {
+    margin-top: 20px
+}
+
+.nav_custom #main_menu .nav_buttom li a {
+    color: #ffffff;
+    background: #96d036 none repeat scroll 0% 0%;
+    font: 400 13px/40px "Roboto", sans-serif;
+    border-radius: 3px;
+    padding: 0px 25px;
+    transition: all 300ms linear 0s;
+    position: relative;
+    cursor: pointer;
+    width: 200px
+    
+}
+
+.nav_custom #main_menu .nav_buttom li a:hover,
+.nav_custom #main_menu .nav_buttom li a:focus {
+    background: #ffc949
+}
+
+.nav_custom #main_menu .nav_buttom li a:hover i,
+.nav_custom #main_menu .nav_buttom li a:focus i {
+    -webkit-transform: translateX(6px);
+    -moz-transform: translateX(6px);
+    -o-transform: translateX(6px);
+    transform: translateX(6px)
+}
+
+.nav_custom #main_menu .nav_buttom li a i {
+    font-size: 16px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    transition: all 300ms linear 0s;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transition-property: transform
+}
+
+.banner-area {
+    background: transparent url("../img/banner.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-area:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(92, 102, 109, 0.88);
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    z-index: -1
+}
+
+.banner-area h2 {
+    text-align: center;
+    color: #fff;
+    font: 700 36px "Roboto", sans-serif;
+    margin: 0;
+    padding: 52px 0 50px 0
+}
+
+.banner-area .bottom-menu-area {
+    background-color: rgba(0, 0, 0, 0.149);
+    text-align: center;
+    color: #aeb9c3;
+    padding: 16px 0 16px 0
+}
+
+.banner-area .bottom-menu-area a {
+    color: #aeb9c3;
+    font: 400 13px "Roboto", sans-serif;
+    text-transform: uppercase;
+    margin-right: 7px
+}
+
+.banner-area .bottom-menu-area a:hover,
+.banner-area .bottom-menu-area a:focus {
+    color: #fff
+}
+
+.banner-area .bottom-menu-area i {
+    color: #aeb9c3;
+    font-size: 12px;
+    margin-right: 5px
+}
+
+.footer_area {
+    margin: 4vw 0vw 0vw;
+    background-color: #14679c;
+}
+
+.footer_area .copy_right {
+    background-color: #116093;
+    text-align: center;
+    color: #79bbe5;
+    font: 400 14px "Roboto", sans-serif;
+    margin: 0;
+    padding: 20px 0 20px
+}
+
+.footer_area .copy_right a {
+    color: #79bbe5;
+    font: 400 14px/20px "Roboto", sans-serif;
+    text-transform: uppercase
+}
+
+.footer_area .copy_right a:hover,
+.footer_area .copy_right a:focus {
+    color: #FFFFFF
+}

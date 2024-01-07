@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=""/>
+	<!-- Meta tag Keywords -->
+
+    <!--Bootstrap-->
+	<link rel="stylesheet" type="text/css" href="static/out/bootstrap/bootstrap.min.css" media="all" /> 
+    <!--Bootstrap-select CSS-->
+	<link rel="stylesheet" type="text/css" href="static/out/bootstrap-select/bootstrap-select.min.css" media="all" />
+	<!-- Font-Awesome-Icons-CSS -->
+	<link rel="stylesheet" href="static/css/fontawesome.css">
+
+	<link rel="stylesheet" href="static/css/login.css" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" href="static/css/common.css" media="all" /> 
+ 
+</head>
+
+<body>
+    <!-- Start Header Nav-->
+    <nav class="navbar navbar-default nav_custom row">
+        <div class="container coustome-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand_logo" href="index.html"><img src="static/img/logo.png" alt="Logo"></a>
+            </div>
+
+            <div class="row collapse navbar-collapse" id="main_menu">
+                <ul class="nav navbar-right nav_buttom">
+                     <li><a id="login_or_exit" onclick="onLoginClick()">Login<i class="lnr lnr-arrow-right"></i></a></li>
+					 <li id="current_user_name"></li>
+				</ul>
+                <ul class="nav navbar-nav navbar-menu">
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="property_list.html">Information List</a></li>
+                    <li><a href="#" onclick = "PostInformation()">Post</a></li>
+                </ul>
+            </div>
+        </div> 
+    </nav>  
+    <!-- End Header Nav -->
+	<!-- Start Form -->
+	<div class="login_main_content">
+		<form action="#" method="post">
+			<h2>User Register
+				<i class="fas fa-level-down-alt"></i>
+			</h2>
+			<div class="form-group">
+				<label>
+					<i class="fas fa-user"></i>
+					Username
+				</label>
+				<input placeholder="Please input user name" id="user_input" name="Name" type="text" required=""></input>
+			</div>
+			<div class="form-group">
+				<label>
+					<i class="fas fa-unlock-alt"></i>
+					password
+				</label>
+				<input placeholder="Please input password" id="pass_input" name="Password" type="password" required=""></input>
+			</div>
+			<div class="form-group">
+				<label>
+					<i class="fas fa-unlock-alt"></i>
+					confirm password
+				</label>
+				<input placeholder="Confirm Password" id="confirm_pass_input" name="Password" type="password" required=""></input>
+			</div>
+			<div class="form-group-o">
+				<label>
+					<i class="fas fa-mobile"></i>
+					phone number
+				</label>
+				<input placeholder="Phone number" id="phone_number_input" name="Password" type="number" required=""></input>
+			</div>
+			<div class="form-group-o"  style="margin-left:22px;margin-right:22px;">
+				<label>
+					<i class="fas fa-history"></i>
+					age
+				</label>
+				<input placeholder="Age" id="age_input" name="Password" type="number" required=""></input>
+			</div>
+			<div class="form-group-o">
+				<label>
+					<i class="fas fa-adjust"></i>
+					gender
+				</label>
+				<div class="form-group-o">
+					<select class="selectpicker" id ="gender_input">
+						<option>male</option>
+						<option>female</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group-o">
+				<label>
+					<i class="fas fa-fax"></i>
+					email
+				</label>
+				<input placeholder="email" id="user_email_input" type="text" required=""></input>
+			</div>
+			<div class="form-group-o"  style="margin-left:22px;margin-right:22px;">
+				<label>
+					<i class="fas fa-briefcase"></i>
+					job
+				</label>
+				<input placeholder="Please input your job" id="user_title_input" type="text" required=""></input>
+			</div>
+			<div class="form-group-o">
+				<label>
+					<i class="fas fa-image"></i>
+					picture
+				</label>
+				<input placeholder="Please Upload a Picture" id="user_picture_input" type="file" onclick="addPicture('user_picture_input','user_picture_preview')"></input>
+				<div id="user_picture_preview"></div>
+			</div>
+
+			<div class="form-group">
+				<label>
+					<i class="fas fa-film"></i>
+					Content
+				</label>
+				<textarea placeholder="Please Input Personal Introduction" id="user_content_input" name="Name" type="text" style="height: 200px;"></textarea>
+			</div>
+
+			<input class = "login_btn" type="button" value="Register" onclick="Register()"></input>
+		</form>
+	</div>
+	<!-- End Form -->
+    <!--Start Footer -->
+    <footer class="footer_area row">
+    	<div class="copy_right">
+    		© MADE WITH LOVE BY <a href="#">B.Y. Yang</a> ALL RIGHTS RESERVED
+    	</div>
+    </footer>
+    <!--End Footer -->
+    <!--jQuery JS-->
+    <script src="static/out/jquery/jquery-1.12.0.min.js"></script>
+    <script src="static/js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="static/js/login.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
